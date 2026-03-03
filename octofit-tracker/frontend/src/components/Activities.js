@@ -1,3 +1,4 @@
+// Trigger workflow: minor comment for workflow activation
 import React, { useEffect, useState } from 'react';
 
 const Activities = () => {
