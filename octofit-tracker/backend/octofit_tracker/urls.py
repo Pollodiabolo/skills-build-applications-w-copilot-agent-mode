@@ -1,5 +1,6 @@
 # Add this import at the top
 from rest_framework.decorators import api_view
+from rest_framework.response import Response
 """octofit_tracker URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
@@ -49,7 +50,7 @@ def api_root(request):
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('api/', api_root, name='api-root'),
     path('api/', include(router.urls)),
+    path('api-root/', api_root, name='api-root'),
     path('', api_root),
 ]

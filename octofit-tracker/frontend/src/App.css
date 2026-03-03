@@ -1,38 +1,106 @@
-.App {
-  text-align: center;
+
+html, body, #root, .App {
+  height: 100%;
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #e0e7ff 0%, #f0fdfa 100%);
+  color: #22223b;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.navbar {
+  background: linear-gradient(90deg, #3a86ff 0%, #8338ec 100%) !important;
+  box-shadow: 0 2px 8px rgba(58,134,255,0.1);
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.navbar-brand {
+  font-weight: bold;
+  color: #fff !important;
+  letter-spacing: 1px;
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+}
+.navbar-nav .nav-link {
+  color: #f1faee !important;
+  font-weight: 500;
+  margin-right: 10px;
+  transition: color 0.2s;
+}
+.navbar-nav .nav-link:hover {
+  color: #ffd60a !important;
 }
 
-.App-link {
-  color: #61dafb;
+/* Logo styling */
+.octofit-logo {
+  height: 40px;
+  margin-right: 12px;
+  border-radius: 8px;
+  background: #fff;
+  box-shadow: 0 2px 8px rgba(58,134,255,0.08);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+main.container {
+  padding-top: 24px;
+}
+
+.card {
+  border-radius: 16px;
+  box-shadow: 0 2px 12px rgba(58,134,255,0.07);
+  border: none;
+}
+.card-title {
+  color: #3a86ff;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+/* Table styling */
+.table {
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+}
+.table-primary th {
+  background: linear-gradient(90deg, #3a86ff 0%, #8338ec 100%);
+  color: #fff;
+  border: none;
+}
+.table-striped > tbody > tr:nth-of-type(odd) {
+  background-color: #e0e7ff;
+}
+.table-bordered {
+  border: 1px solid #3a86ff;
+}
+
+/* Button styling */
+.btn-success {
+  background: linear-gradient(90deg, #06d6a0 0%, #3a86ff 100%);
+  border: none;
+  color: #fff;
+  font-weight: 600;
+  box-shadow: 0 2px 8px rgba(6,214,160,0.08);
+  transition: background 0.2s;
+}
+.btn-success:hover {
+  background: linear-gradient(90deg, #3a86ff 0%, #06d6a0 100%);
+  color: #fff;
+}
+
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+  color: #3a86ff;
+  font-weight: 700;
+}
+
+a {
+  color: #3a86ff;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+a:hover {
+  color: #ffd60a;
+  text-decoration: underline;
+}
+
+/* Favicon fallback for dark mode */
+link[rel="icon"] {
+  filter: drop-shadow(0 0 2px #3a86ff);
 }
