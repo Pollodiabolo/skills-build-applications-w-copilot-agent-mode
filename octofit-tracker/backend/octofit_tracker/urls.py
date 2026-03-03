@@ -1,3 +1,5 @@
+# Add this import at the top
+from rest_framework.decorators import api_view
 """octofit_tracker URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
@@ -16,8 +18,17 @@ Including another URLconf
 
 from django.contrib import admin
 from django.urls import path, include
+
 from rest_framework import routers
 from .views import UserViewSet, TeamViewSet, ActivityViewSet, LeaderboardViewSet, WorkoutViewSet
+
+# Define the router and register viewsets
+router = routers.DefaultRouter()
+router.register(r'users', UserViewSet, basename='user')
+router.register(r'teams', TeamViewSet, basename='team')
+router.register(r'activities', ActivityViewSet, basename='activity')
+router.register(r'leaderboard', LeaderboardViewSet, basename='leaderboard')
+router.register(r'workouts', WorkoutViewSet, basename='workout')
 
 import os
 codespace_name = os.environ.get('CODESPACE_NAME')
