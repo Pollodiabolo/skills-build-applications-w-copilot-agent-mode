@@ -1,3 +1,4 @@
+# Trigger workflow: small change for GitHub Actions
 """
 Django settings for octofit_tracker project.
 
